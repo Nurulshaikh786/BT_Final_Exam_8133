@@ -1,3 +1,136 @@
-body{
-font-family: 'Poppins';;
+/* Professional Architecture Website Styling - Custom CSS for enhanced Bootstrap components */
+
+/* Hero Section - Full-height carousel for architectural showcase */
+.hero-section {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel Background Images - Optimized for architectural photography */
+.carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for better text readability */
+.carousel-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(44, 62, 80, 0.4), rgba(0, 0, 0, 0.6));
+}
+
+/* Carousel Caption Positioning */
+.carousel-caption {
+    position: relative;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 0;
+}
+
+/* Ensure consistent carousel slide heights */
+.carousel-item {
+    height: 100vh;
+    min-height: 600px;
+}
+
+/* Subtle card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(44, 62, 80, 0.3) !important;
+}
+
+/* Smooth scrolling navigation behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Account for fixed navigation bar when scrolling to sections */
+section {
+    scroll-margin-top: 76px;
+}
+
+/* Button styling */
+.btn {
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    border-radius: 0.375rem;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Navigation styling */
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(236, 240, 241, 0.1);
+}
+
+/* Shadow effects */
+.shadow-lg {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-section, .carousel-item {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .display-4 {
+        font-size: 2.2rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .carousel-caption h1 {
+        font-size: 2.8rem;
+    }
 }

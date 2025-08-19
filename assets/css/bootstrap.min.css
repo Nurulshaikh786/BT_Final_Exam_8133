@@ -3843,7 +3843,7 @@ fieldset:disabled .btn {
     position: relative
 }
 
-.dropdown-toggle {
+.-toggle {
     white-space: nowrap
 }
 
